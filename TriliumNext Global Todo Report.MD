@@ -1,4 +1,4 @@
-# 🚀 TriliumNext Global Todo Reporter
+# TriliumNext Global Todo Reporter
 
 **TriliumNext Global Todo Reporter** is a backend script that scans your entire **TriliumNext note tree** for checkbox tasks and generates a clean, centralized **global todo report** inside a dedicated note.
 
@@ -6,38 +6,38 @@ Since **TriliumNext** does not currently include a built-in global task dashboar
 
 ---
 
-# ✨ Features
+# Features
 
-### 🔎 Deep Scan
+## Deep Scan
 
 Searches **all text notes** for checkboxes regardless of their location or tree depth.
 
-### 📄 Line-by-Line Reporting
+## Line-by-Line Reporting
 
 Extracts the **actual task text** so you don't have to open every note individually.
 
-### 🔗 Smart Navigation
+## Smart Navigation
 
 Task links open the source note in a **new tab or split pane** (`target="_blank"`).
 
-### 🎨 Visual Status
+## Visual Status
 
 Tasks display with clear visual indicators:
 
 | Status         | Icon   |
 | -------------- | ------ |
-| Open Task      | 🟧 `□` |
-| Completed Task | ✅      |
+| Open Task      | [ ] `□` |
+| Completed Task | [x]    |
 
-### 📂 Note Grouping
+## Note Grouping
 
 Tasks are grouped under their **parent note title** with a visual border for clarity.
 
 ---
 
-# 🛠️ Setup Instructions
+# Setup Instructions
 
-## 1️⃣ Create the Report Note
+## 1. Create the Report Note
 
 1. Create a new **Text Note** anywhere in your tree.
 2. Name it:
@@ -61,7 +61,7 @@ mZ3MxTN5z5bN
 
 ---
 
-## 2️⃣ Create the Script Note
+## 2. Create the Script Note
 
 1. Create a new note.
 2. Set the **Note Type** to:
@@ -88,7 +88,7 @@ with the **Note ID** you copied earlier.
 
 ---
 
-# 📜 Script
+# Script
 
 ```javascript
 /**
@@ -130,8 +130,8 @@ with the **Note ID** you copied earlier.
                 
                 // Status Styling
                 const status = isChecked 
-                    ? "✅" 
-                    : "<span style='color: orange; font-weight: bold; font-size: 1.1em;'>□</span>";
+                    ? "[x]" 
+                    : "<span style='color: orange; font-weight: bold; font-size: 1.1em;'>[ ]</span>";
                 
                 // Strip HTML tags
                 const cleanText = liInnerHtml.replace(/<[^>]*>?/gm, '').trim();
@@ -166,7 +166,7 @@ with the **Note ID** you copied earlier.
 
 ---
 
-# ⚙️ Automation & UI Shortcuts
+# Automation & UI Shortcuts
 
 Add the following **labels** to the script note to integrate it smoothly into your workflow.
 
@@ -177,56 +177,56 @@ Add the following **labels** to the script note to integrate it smoothly into yo
 
 ---
 
-# 📝 Usage Tips
+# Usage Tips
 
-### 🧭 New Tabs
+## New Tabs
 
 On the desktop version of **TriliumNext**, links using `target="_blank"` typically open the note in a **new split pane**.
 
-### 📄 Legacy Notes
+## Legacy Notes
 
 If older notes do not appear in the report, ensure they are set to the **Text** note type.
 
-### 🎨 Custom Icons
+## Custom Icons
 
 You can easily change the task status icons in the script:
 
 ```js
-"✅"
-"□"
+"[x]"
+"[ ]"
 ```
 
-Replace them with any **emoji or HTML entity** you prefer.
+Replace them with any **text or HTML entity** you prefer.
 
 Examples:
 
 ```
-🔲
-🟧
-✔️
-📝
+[ ]
+[x]
++
+*
 ```
 
 ---
 
-# 📊 Example Output
+# Example Output
 
 ```
 Comprehensive Todo Report
 
 Project Planning
-□ Write proposal
-□ Review design docs
-✅ Schedule team meeting
+[ ] Write proposal
+[ ] Review design docs
+[x] Schedule team meeting
 
 Personal Tasks
-□ Buy groceries
-✅ Call electrician
+[ ] Buy groceries
+[x] Call electrician
 ```
 
 ---
 
-# ❤️ Contributing
+# Contributing
 
 Pull requests, improvements, and suggestions are welcome!
 
@@ -234,7 +234,6 @@ If you enhance the script (filters, tagging, priority sorting, etc.), feel free 
 
 ---
 
-# 👥 Credits
+# Credits
 
 Created for the **TriliumNext community**.
-
